@@ -6,4 +6,5 @@ from .models import Challenge
 class ChallengeViewSet(viewsets.ModelViewSet): 
     queryset = Challenge.objects.all().order_by('title')
     serializer_class = ChallengeSerializer
+    lookup_field = 'id'
 

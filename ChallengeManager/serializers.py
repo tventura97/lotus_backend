@@ -4,4 +4,5 @@ from .models import Challenge
 class ChallengeSerializer(serializers.HyperlinkedModelSerializer): 
     class Meta:
         model = Challenge
-        fields = ('title', 'description', 'pointValue')
+        fields = ('id', 'title', 'description', 'pointValue')
+        lookup_field = 'id'

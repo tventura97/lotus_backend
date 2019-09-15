@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ChallengeManager.apps.ChallengemanagerConfig',
+    'AccountManager.apps.AccountManagerConfig',
     'rest_framework'
 ]
 

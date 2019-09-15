@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from AccountManager.urls import router as amRouter
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('ChallengeManager.urls')),
-    path('', include('AccountManager.urls'))
+    path('', include('AccountManager.urls')),
 ]

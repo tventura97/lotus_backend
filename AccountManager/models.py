@@ -23,3 +23,17 @@ class Challenge(models.Model):
     def __str__(self): 
         return self.title
 
+class Moment(models.Model):
+    account = models.ForeignKey(Account, on_delete=models.PROTECT, default="")
+    title = models.CharField(max_length=150)
+    date = models.DateTimeField()
+    challenge = models.ForeignKey(Challenge, on_delete=models.PROTECT, default="")
+    description = models.CharField(max_length=500)
+
+
+class Photo(models.Model):
+    account = models.ForeignKey(Account, on_delete=models.PROTECT, default = "")
+    moment = models.ForeignKey(Moment, on_delete=models.PROTECT, default = "")
+    url = models.CharField(max_length=200, default = "")
+
+
